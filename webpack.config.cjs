@@ -2,6 +2,7 @@ const path = require('path');
 
 module.exports = {
   entry: './index.ts',
+  target: 'node',
   module: {
     rules: [
       {
@@ -15,7 +16,8 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js'],
   },
   output: {
-    filename: 'bundle.js',
+    filename: 'bundle.cjs',
     path: path.resolve(__dirname, 'dist'),
   },
 };
+// "-": "^0.0.1",

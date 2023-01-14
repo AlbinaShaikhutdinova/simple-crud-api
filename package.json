@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.ts"
+    "start:dev": "nodemon index.ts",
+    "start:prod": "webpack --mode development && node ./dist/bundle.cjs"
   },
   "repository": {
     "type": "git",
@@ -28,7 +29,6 @@
     "webpack-cli": "^5.0.1"
   },
   "dependencies": {
-    "-": "^0.0.1",
     "@types/dotenv": "^8.2.0",
     "@types/node": "^18.11.18",
     "dotenv": "^16.0.3",
